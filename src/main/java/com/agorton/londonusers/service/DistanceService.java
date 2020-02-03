@@ -26,7 +26,7 @@ public class DistanceService {
         return kilometers * 0.62137;
     }
 
-    public static double haversin(double val) {
+    private static double haversin(double val) {
         return Math.pow(Math.sin(val / 2), 2);
     }
 }
