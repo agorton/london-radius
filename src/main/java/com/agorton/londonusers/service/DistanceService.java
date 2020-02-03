@@ -9,6 +9,7 @@ public class DistanceService {
     private static final double LONDON_LAT = 51.509865;
     private static final double LONDON_LONG = -0.118092;
 
+    // https://en.wikipedia.org/wiki/Haversine_formula
     public double getDistanceFromLondon(double latitude, double longitude) {
         double latitudeDiffInRadians = Math.toRadians((LONDON_LAT - latitude));
         double longitudeDiffInRadians = Math.toRadians(LONDON_LONG - longitude);
