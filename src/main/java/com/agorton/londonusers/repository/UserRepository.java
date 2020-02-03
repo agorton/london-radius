@@ -1,5 +1,6 @@
-package com.agorton.londonusers;
+package com.agorton.londonusers.repository;
 
+import com.agorton.londonusers.domain.User;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -31,7 +32,7 @@ public class UserRepository {
         return responseEntity.getBody();
     }
 
-    public List<User> getUsersFromApi() {
+    public List<User> getAllUsers() {
         ParameterizedTypeReference<List<User>> typeRef = new ParameterizedTypeReference<List<User>>() {};
 
         ResponseEntity<List<User>> responseEntity = restTemplate.exchange(
